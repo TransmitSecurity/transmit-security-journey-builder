@@ -75,11 +75,11 @@ Email OTP authentication with retry loop (up to 5 attempts):
               "presentation": "action",
               "display_name": {
                 "type": "expression",
-                "value": "`Email OTP`"
+                "value": "\"Email OTP\""
               },
               "data_json_schema": {
                 "type": "expression",
-                "value": "`{\n   \"type\": \"object\",\n  \"properties\": {\n    \"username\": {\n      \"type\": \"string\"\n    },\n    \"email\": {\n      \"type\": \"string\",\n      \"format\": \"email\"\n    }\n  }\n}`"
+                "value": "{\n   \"type\": \"object\",\n  \"properties\": {\n    \"username\": {\n      \"type\": \"string\"\n    },\n    \"email\": {\n      \"type\": \"string\",\n      \"format\": \"email\"\n    }\n  }\n}"
               }
             }
           ],
@@ -138,11 +138,11 @@ Email OTP authentication with retry loop (up to 5 attempts):
             "presentation": "action",
             "display_name": {
               "type": "expression",
-              "value": "`Email OTP`"
+              "value": "\"Email OTP\""
             },
             "data_json_schema": {
               "type": "expression",
-              "value": "`{\n   \"type\": \"object\",\n  \"properties\": {\n    \"username\": {\n      \"type\": \"string\"\n    },\n    \"email\": {\n      \"type\": \"string\",\n      \"format\": \"email\"\n    }\n  }\n}`"
+              "value": "{\n   \"type\": \"object\",\n  \"properties\": {\n    \"username\": {\n      \"type\": \"string\"\n    },\n    \"email\": {\n      \"type\": \"string\",\n      \"format\": \"email\"\n    }\n  }\n}"
             }
           }
         ],
@@ -228,7 +228,7 @@ Email OTP authentication with retry loop (up to 5 attempts):
               "name": "error",
               "value": {
                 "type": "expression",
-                "value": "`Error sending an email to ${loginForm.email}`"
+                "value": "\"Error sending an email to ${loginForm.email}\""
               }
             }
           ],

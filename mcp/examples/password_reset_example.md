@@ -291,7 +291,7 @@ Complete the journey with appropriate success messaging, whether the user regist
                     },
                     "form_schema": {
                       "type": "expression",
-                      "value": "[\n  {\n    \"type\": \"input\",\n    \"name\": \"choice\",\n    \"label\": `Would you like to register a passkey? (yes/no)`,\n    \"defaultValue\":\"\",\n    \"dataType\": \"string\",\n    \"format\": \"text\",\n    \"required\": true,\n    \"readonly\": false\n  }\n]"
+                      "value": "[\n  {\n    \"type\": \"input\",\n    \"name\": \"choice\",\n    \"label\": \"Would you like to register a passkey? (yes/no)\",\n    \"defaultValue\":\"\",\n    \"dataType\": \"string\",\n    \"format\": \"text\",\n    \"required\": true,\n    \"readonly\": false\n  }\n]"
                     },
                     "var_name": "choiceData"
                   },
@@ -319,7 +319,7 @@ Complete the journey with appropriate success messaging, whether the user regist
                     "operation": "==",
                     "value": {
                       "type": "expression",
-                      "value": "`yes`"
+                      "value": "\"yes\""
                     },
                     "data_type": "string"
                   },
