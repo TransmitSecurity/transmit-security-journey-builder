@@ -52,6 +52,15 @@ Install the extension using the Gemini CLI:
 gemini extensions install https://github.com/TransmitSecurity/ts_ido_journey_builder_gemini_cli_extension
 ```
 
+After installation, install the required npm packages for the MCP server:
+
+```bash
+cd ~/.gemini/extensions/ts-ido-journey-builder/mcp
+npm install
+```
+
+If Gemini CLI is already running, restart it after installation.
+
 ## Configuration
 
 The extension is configured via `gemini-extension.json`:
