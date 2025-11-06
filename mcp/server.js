@@ -7,7 +7,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import { execFile } from "child_process";
 import { access, constants, readFile, stat } from "fs/promises";
-import { basename, dirname, extname, isAbsolute, join, relative, resolve } from "path";
+import { dirname, extname, isAbsolute, join, relative, resolve } from "path";
 import { fileURLToPath } from "url";
 import { promisify } from "util";
 
@@ -87,10 +87,14 @@ function sanitizeErrorMessage(message, filePath) {
     if (!message) return message;
     
     // Replace full absolute paths with just the filename
-    const fileName = basename(filePath);
+    // Handle both Unix (/) and Windows (\) separators
+    const fileName = filePath.split(/[/\\]/).pop();
+    // Escape special regex characters in filePath
+    const escapedPath = filePath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const sanitized = message
-        .replace(new RegExp(filePath, 'g'), fileName)
-        .replace(/[\/\\][^\s\/\\]+[\/\\][^\s\/\\]+[\/\\]/g, ''); // Remove any other absolute paths (Unix/Windows)
+        .replace(new RegExp(escapedPath, 'g'), fileName)
+        // Remove any other absolute paths: UNC (\\), Windows (C:\), or Unix (/)
+        .replace(/(?:\\\\|[A-Za-z]:[\\/]|[\\/])(?:[^\/\\\s]+[\\/]?)+/g, '');
     
     return sanitized;
 }
