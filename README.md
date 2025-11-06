@@ -431,5 +431,3 @@ For issues, questions, or contributions:
 
 **Version:** 1.0.0  
 **Last Updated:** November 2025
-
-> **Note:** This extension is an independent project designed to facilitate IDO Journey generation for Transmit Security's platform. It is not officially affiliated with or endorsed by Transmit Security.
