@@ -560,10 +560,9 @@ Different fields require different expression value types:
 Information nodes (`type: "information"`) have **different expression requirements** than condition nodes:
 
 **Key Differences:**
-1. **NO backticks** for static strings (unlike other expressions)
-2. **NO newlines** in text expressions
-3. **Static strings MUST be quoted** (use `"` not backticks)
-4. Use `${}` interpolation **without** backtick wrapper
+1. **NO newlines** in text expressions
+2. **Static strings MUST be quoted** (use `"` not backticks)
+3. Use `${}` interpolation **without** backtick wrapper
 
 **✅ CORRECT Information Node Patterns:**
 
