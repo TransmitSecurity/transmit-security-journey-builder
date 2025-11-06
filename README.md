@@ -270,7 +270,7 @@ The extension provides comprehensive context through `instructions.md`
 gemini_cli_extension/
 ├── README.md                         # This file
 ├── images/                           # Images used for this file
-├── LICE    txt                       # Apache 2.0 License
+├── LICENSE                           # Apache 2.0 License
 ├── gemini-extension.json             # Extension configuration
 ├── instructions.md                   # Comprehensive instructions (50% smaller!)
 └── mcp/                              # MCP server and validators
