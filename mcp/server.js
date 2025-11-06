@@ -55,8 +55,8 @@ async function validatePath(filePath) {
     }
 
     // Check file extension
-    const ext = basename(absolutePath).toLowerCase();
-    const hasValidExtension = ALLOWED_EXTENSIONS.some(allowed => ext.endsWith(allowed));
+    const ext = (extname(absolutePath) || '').toLowerCase();
+    const hasValidExtension = ALLOWED_EXTENSIONS.includes(ext);
     if (!hasValidExtension) {
         throw new Error(`Access denied: only ${ALLOWED_EXTENSIONS.join(', ')} files are allowed`);
     }
