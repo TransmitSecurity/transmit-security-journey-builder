@@ -49,13 +49,13 @@ The [Mosaic platform](https://developer.transmitsecurity.com/) is Transmit Secur
 Install the extension using the Gemini CLI:
 
 ```bash
-gemini extensions install https://github.com/TransmitSecurity/ts_ido_journey_builder_gemini_cli_extension
+gemini extensions install https://github.com/TransmitSecurity/transmit-security-journey-builder
 ```
 
 After installation, install the required npm packages for the MCP server:
 
 ```bash
-cd ~/.gemini/extensions/ts-ido-journey-builder/mcp
+cd ~/.gemini/extensions/transmit-security-journey-builder/mcp
 npm install
 ```
 
@@ -67,7 +67,7 @@ The extension is configured via `gemini-extension.json`:
 
 ```json
 {
-  "name": "ts-ido-journey-builder",
+  "name": "transmit-security-journey-builder",
   "version": "1.0.0",
   "contextFileName": "instructions.md",
   "mcpServers": {
